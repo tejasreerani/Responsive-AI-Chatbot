@@ -11,6 +11,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai
 import tiktoken
+import streamlit as st  # Added to fix: NameError: name 'st' is not defined
 
 from pypdf import PdfReader
 from docx import Document
@@ -24,8 +25,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # ============================================================
 load_dotenv()
 
+# Read from Streamlit secrets (Cloud), fallback to os.getenv (Local)
 GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
-MODEL_NAME = st.secrets.get("MODEL_NAME", os.getenv("MODEL_NAME", "gemini-2.5-flash"))
+MODEL_NAME = st.secrets.get("MODEL_NAME", os.getenv("MODEL_NAME", "gemini-3.1-flash-lite"))
 
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found")
@@ -321,7 +323,7 @@ class Chatbot:
 chatbot = Chatbot()
 
 # ============================================================
-# Library & Helpers (Placed correctly at bottom)
+# Library & Helpers
 # ============================================================
 class LibraryManager:
     def __init__(self):
