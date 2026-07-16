@@ -171,7 +171,7 @@ GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
 MONGODB_URI = st.secrets.get("MONGODB_URI", os.getenv("MONGODB_URI"))
 POSTGRES_URL = st.secrets.get("POSTGRES_URL", os.getenv("POSTGRES_URL"))
 
-MODEL_NAME = st.secrets.get("MODEL_NAME", os.getenv("MODEL_NAME", "gemini-2.5-flash-lite"))
+MODEL_NAME = st.secrets.get("MODEL_NAME", os.getenv("MODEL_NAME", "gemini-3.1-flash-lite"))
 TEMPERATURE = float(st.secrets.get("TEMPERATURE", os.getenv("TEMPERATURE", "0.3")))
 TOP_P = float(st.secrets.get("TOP_P", os.getenv("TOP_P", "0.95")))
 TOP_K = int(st.secrets.get("TOP_K", os.getenv("TOP_K", "40")))
