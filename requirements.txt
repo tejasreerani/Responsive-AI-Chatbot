@@ -1,12 +1,33 @@
-﻿streamlit
-google-generativeai
+﻿# Data Processing
+pandas
+numpy
+
+# Environment & UI
 python-dotenv
-tiktoken
+streamlit
+
+# Google Gemini API
+google-generativeai
+
+# Document Processing
+pillow
 pypdf
 python-docx
-pillow
+
+# Voice & Speech
+SpeechRecognition
+gTTS
+sounddevice
+scipy
+
+# Database & ORM
+pymongo
+sqlalchemy
+psycopg2-binary
+
+# NLP & Vector Embeddings
+spacy
+tiktoken
 faiss-cpu
 sentence-transformers
 langchain-text-splitters
-SpeechRecognition
-gTTS
