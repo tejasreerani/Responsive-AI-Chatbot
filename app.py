@@ -167,7 +167,7 @@ Insight AI Assistant is an enterprise multimodal AI chatbot built using:
 
 ### Technologies
 
-- Google Gemini 2.5 Flash
+- gemini-3.1-flash-lite
 - Python
 - Streamlit
 - Retrieval Augmented Generation (RAG)
