@@ -1,4 +1,4 @@
-from analysis import your_function_name
+import analysis
 # ============================================================
 # app.py
 # Insight AI Assistant Streamlit UI
